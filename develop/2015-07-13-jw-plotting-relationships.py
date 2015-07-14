@@ -55,9 +55,9 @@ colors = sns.color_palette(n_colors=len(dframe.Year.unique()))
 color_dict = {key: value for key, value in zip(sorted(dframe.Year.unique()), colors)}
 
 
-# In[7]:
+# In[15]:
 
-for year in sorted(dframe.Year.unique()[[0,2, 5, -1]]):
+for year in sorted(dframe.Year.unique()[[0, 2, 5, -1]]):
     plt.scatter(dframe[dframe.Year == year].Labor_Hours,
                 dframe[dframe.Year == year].Production_short_tons, 
                 c=color_dict[year],
@@ -112,6 +112,11 @@ plt.xlabel("Average # Employees")
 plt.ylabel("Total Amount Produced") 
 plt.tight_layout()
 plt.savefig("../figures/production-vs-number-employees.png", dpi=350)
+
+
+# In[ ]:
+
+
 
 
 # In[ ]:
