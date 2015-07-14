@@ -105,9 +105,9 @@ plt.tight_layout()
 plt.savefig("../figures/production-vs-hours-worked.png", dpi=350)
 
 
-# In[14]:
+# In[19]:
 
-sns.jointplot('Average_Employees', 'Production_short_tons', data=df2, kind="reg", ) 
+sns.jointplot('Average_Employees', 'Production_short_tons', data=df2, kind="reg", color=color_dict[2004]) 
 plt.xlabel("Average # Employees")
 plt.ylabel("Total Amount Produced") 
 plt.tight_layout()
