@@ -75,16 +75,15 @@ import pandas as pd
 
 # # Outline
 # 
+# 1. Tips and tricks throughout
 # 1. Quick demo of the Jupyter Notebook
-# 1. Intermediate level usage and examples
-# 1. Jupyter Notebook for Data Science teamwork 
-# 1. Bit of Advanced Usage
+# 1. Notebook organization and layout
+# 1. Jupyter Notebook for Data Science teamwork workflow 
 # 1. Github repo of all the Notebooks used in this talk available
 
-# # Quick Demo 
+# # Demo: Introduce the Jupyter Notebook 
 # 
-#  - What is the Jupyter notebook?
-#  - Why do people love using it for Data Science?
+# ### and hopefully show why people love using it for Data Science
 # 
 
 # ## How does a team of Data Scientists use the Jupyter Notebooks effectively?
@@ -112,8 +111,6 @@ import pandas as pd
 
 # # Lab notebook -- Exploratory Data Analysis
 # 
-# Think: actual paper laboratory notebooks.
-# 
 # <img src="../figures/2097753744_184f05d463_z.jpg">
 # 
 # Source: https://flic.kr/p/4cnx71
@@ -128,33 +125,23 @@ import pandas as pd
 
 #    - Each notebook is controlled by a single Data Scientist
 
-#    - Split the notebooks when they get too long
+#    - Split the notebooks when they get too long (turn the page)
 
 #    - Split the notebooks by topic if it makes sense.
 
 # # 2 The Deliverable notebook
 # 
-# For example: 
+# Any Notebook that will be referenced in the future. For example: 
 # 
-#  - Analysis that will be referenced (how raw data was transformed into cleaned data)
+#  - How raw data was transformed into cleaned data.
+
 #  - The fully polished and final outputs of the analysis.
+
 #  - Peer reviewed via pull requests (other members will review before accepted).
+
 #  - These notebooks are controlled by the whole Data Science team.
-# 
 
 # # Demo: Example Lab Notebook 
-
-# # Tip: Get organized -- High level directories
-# 
-#  - data # Backed up outside of version control
-
-#  - deliver # Final polished Notebooks for consumption
-
-#  - develop # Lab Notebooks stored here
-
-#  - figures # Figures stored here
-
-#  - src # Scripts/modules stored here
 
 # # Naming things is hard... 
 # 
@@ -186,20 +173,63 @@ import pandas as pd
 #  - [ISO 8601 date]-[DS-initials]-**[2-4 word description]**.ipynb
 #  - 2015-07-13-jw-**coal-yearly-productivity**.ipynb
 
+# # Tip: Get organized -- High level directories
+# 
+#  - data # Backed up outside of version control
+
+#  - deliver # Final polished Notebooks for consumption
+
+#  - develop # Lab Notebooks stored here
+
+#  - figures # Figures stored here
+
+#  - src # Scripts/modules stored here
+
+# # Problems
+# 
+# 1. How do you peer review code and store analysis in version control?
+# 
+# ## Further constraints
+# 
+# 1. Project manager who wants to see work in progress or final notebooks but doesn't want to install IPython
+# 1. Not using Github which renders figure diffs nicely
+# 1. Want to review the Python code itself
+
 # # Beware, semi-controversial recommendations coming...
 
-# # Tip: Use post-save hooks
+# # Short Answer
 # 
-# We get around these difficulties by committing:
+# 1. Each Data Scientist has their own dev branch
+# 1. Work is saved and pushed on dev branch daily
+# 1. When ready to merge to master, pull request
+
+# And, finally... commit:
 # 
 #  - `.ipynb`
 #  - `.py`
 #  - `.html` 
+#  - and figures
 # 
-# of every notebook: development or deliverable.
+# of all Notebooks (develop and deliver).
 
-# Add the following code to: `ipython_notebook_config.py` 
+# # Source control is for source... so what's with this output?
 # 
+# <img src="../figures/confused-brad.gif">
+# 
+# Source: http://i.imgur.com/zo4EMKC.gif
+
+# 
+# 
+# # Tip: Use post-save hooks
+# 
+# Add the following slide's code to: `ipython_notebook_config.py`
+# 
+# Find the snippet here: http://bit.ly/post-save-hook-snippet (https://gist.github.com/jbwhit/881bdeeaae3e4128947c)
+# 
+# Modified code from: https://github.com/ipython/ipython/issues/8009 by github user: https://github.com/minrk
+# 
+# 
+
 # ```python 
 # import os
 # from subprocess import check_call
@@ -214,7 +244,6 @@ import pandas as pd
 # 
 # c.FileContentsManager.post_save_hook = post_save
 # ```
-# Modified code from: https://github.com/ipython/ipython/issues/8009 by github user: https://github.com/minrk
 
 # ## What does this do?
 # 
@@ -226,34 +255,36 @@ import pandas as pd
 #  - `first-notebook.py` 
 #  - `first-notebook.html`
 
-# #Tip: Version Control
-# 
-#  - Commit all the files
-#    - `.ipynb`, `.py`, and `.html`
-#    - and the figures
-#  
-# 
-
-# # Source control is for source... so what's with this output?
-# 
-# <img src="../figures/confused-brad.gif">
-# 
-# Source: http://i.imgur.com/zo4EMKC.gif
-
 # # Standard pull-request workflow
 # 
 # Github has been making great strides in making this work well -- still progress to be made
 
-# ## Pull request Demo
+# # Demo: GitHub pull request
 
 # # Benefits
-# 
-# Lab notebook
 # 
 #  1. Record of analysis including dead-ends
 #  1. Ability to easily peer review analysis and dead-ends
 #  1. Project managers can easily see and read the analysis with GitHub `.ipynb` or `.html` without installing `ipython`
 # 
+
+# # Concluding remarks
+# 
+# 1. Organization of workflows in teams is difficult
+# 1. Having some standards is better than none
+# 1. Sometimes the "wrong thing" exactly solves a problem
+#   1. Storing output figures
+#   1. Having rendered .html files in commits
+# 1. Open to new ideas -- have a better method let me know!
+
+# # Thank you for your attention!
+# 
+#   - Jonathan Whitmore: [@JBWhitmore](https://twitter.com/jbwhitmore)
+#   - SVDS: [@SVDataScience](https://twitter.com/svdatascience)
+#   - This talk via Github: [jbwhit/OSCON-2015](https://github.com/jbwhit/OSCON-2015/)
+#   - Post-save snippet: http://bit.ly/post-save-hook-snippet
+#   - Creating Jupyter slides: https://github.com/damianavila/RISE
+#   - nbdiff: http://nbdiff.org/ 
 
 # # Advanced Usage
 
@@ -278,29 +309,7 @@ import pandas as pd
 #  - ~/.ipython/profile_nbserver/ipython_notebook_config.py
 #  - ~/.ipython/profile_nbserver/ipython_nbconvert_config.py
 
-# # Demo
-# 
-#  - terminal
-#  - autoreload
-#  - embedded text editor
+# In[ ]:
 
-# # Resources
-# 
-#  - Creating Jupyter slides: https://github.com/damianavila/RISE
-# 
-# ## Wishlist
-# 
-#  - nbdiff: http://nbdiff.org/ (GitHub repo: https://github.com/tarmstrong/nbdiff)
-#  
-# 
 
-# # Thank you!
-# 
-# # Please send comments/questions
-# 
-# ## Jonathan B Whitmore 
-#   - Twitter: [@JBWhitmore](https://twitter.com/jbwhitmore)
-#   - These Notesbooke via Github: [jbwhit/OSCON-2015](https://github.com/jbwhit/OSCON-2015)
-#   
-# ### SVDS (Silicon Valley Data Science) [@SVDataScience](https://twitter.com/svdatascience)
-# 
+
