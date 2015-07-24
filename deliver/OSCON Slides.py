@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[13]:
+# In[1]:
 
 from IPython.display import Image
 
@@ -17,7 +17,7 @@ cm.update('livereveal', {
 }) 
 
 
-# In[15]:
+# In[6]:
 
 get_ipython().magic(u'matplotlib inline')
 import matplotlib.pyplot as plt
@@ -42,12 +42,14 @@ import pandas as pd
 # ### SVDS (Silicon Valley Data Science) [@SVDataScience](https://twitter.com/svdatascience)
 # 
 
+# ## Jupyter Notebook == IPython Notebook 3.x
+
 # ## Ju -- Julia
 
 # ## py -- Python
 
 # ## teR -- R
-# 
+
 # # Ju--py--ter!
 
 # # Background
@@ -55,8 +57,8 @@ import pandas as pd
 # Former astrophysicist
 # 
 #  - PhD from UC San Diego 2011
-#  - 3 year postdoc at Swinburne University in Melbourne, Australia
-#  - User of IPython/python since 2007
+#  - 3 year astrophysics postdoc in Melbourne, Australia
+#  - User of IPython/Python since 2007
 #  - User of the IPython Notebook since late 2011/early 2012ish
 
 # # Background
@@ -68,7 +70,7 @@ import pandas as pd
 # 
 #  - Different technical environments
 #   - sometimes we can use GitHub, sometimes not
-#   - sometime python, sometimes not
+#   - sometime Python, sometimes not
 #   - Jupyter Notebook has been very popular with fellow Data Scientists
 
 # # Outline
@@ -77,22 +79,14 @@ import pandas as pd
 # 1. Intermediate level usage and examples
 # 1. Jupyter Notebook for Data Science teamwork 
 # 1. Bit of Advanced Usage
+# 1. Github repo of all the Notebooks used in this talk available
 
-# # Quick Demo -- What is the Jupyter notebook?
+# # Quick Demo 
+# 
+#  - What is the Jupyter notebook?
+#  - Why do people love using it for Data Science?
 # 
 
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# # Problem
-# 
 # ## How does a team of Data Scientists use the Jupyter Notebooks effectively?
 # 
 #  - Do we all use one Notebook?
@@ -144,11 +138,11 @@ import pandas as pd
 # 
 #  - Analysis that will be referenced (how raw data was transformed into cleaned data)
 #  - The fully polished and final outputs of the analysis.
-#  - Peer reviewed -- other team members will review before accepted.
+#  - Peer reviewed via pull requests (other members will review before accepted).
 #  - These notebooks are controlled by the whole Data Science team.
 # 
 
-# # Demo: Simple Example Data Exploration 
+# # Demo: Example Lab Notebook 
 
 # # Tip: Get organized -- High level directories
 # 
@@ -246,10 +240,10 @@ import pandas as pd
 # 
 # Source: http://i.imgur.com/zo4EMKC.gif
 
-# # Standard Pull-request workflow
+# # Standard pull-request workflow
 # 
 # Github has been making great strides in making this work well -- still progress to be made
-# 
+
 # ## Pull request Demo
 
 # # Benefits
@@ -263,17 +257,12 @@ import pandas as pd
 
 # # Advanced Usage
 
-# 
-# 
-# 
-# 
 # # Tip: Run on a server
 # 
 # Useful link about how to setup a remote server: 
 # 
 #  - http://ipython.org/ipython-doc/1/interactive/public_server.html
-# 
-# 
+
 # # Create a server profile
 # 
 # ```bash
@@ -288,21 +277,22 @@ import pandas as pd
 #  - ~/.ipython/profile_nbserver/ipython_qtconsole_config.py
 #  - ~/.ipython/profile_nbserver/ipython_notebook_config.py
 #  - ~/.ipython/profile_nbserver/ipython_nbconvert_config.py
-# 
 
 # # Demo
 # 
-#  - server
-#  - sql magic
-# 
+#  - terminal
+#  - autoreload
+#  - embedded text editor
 
 # # Resources
 # 
-#  - Jupyter slides: https://github.com/damianavila/RISE
-#  
+#  - Creating Jupyter slides: https://github.com/damianavila/RISE
+# 
 # ## Wishlist
 # 
 #  - nbdiff: http://nbdiff.org/ (GitHub repo: https://github.com/tarmstrong/nbdiff)
+#  
+# 
 
 # # Thank you!
 # 
@@ -310,12 +300,7 @@ import pandas as pd
 # 
 # ## Jonathan B Whitmore 
 #   - Twitter: [@JBWhitmore](https://twitter.com/jbwhitmore)
-#   - Github: [jbwhit](https://github.com/jbwhit)
+#   - These Notesbooke via Github: [jbwhit/OSCON-2015](https://github.com/jbwhit/OSCON-2015)
 #   
 # ### SVDS (Silicon Valley Data Science) [@SVDataScience](https://twitter.com/svdatascience)
 # 
-
-# In[ ]:
-
-
-
