@@ -12,7 +12,7 @@
 # 
 # When you clean the raw data, leave the raw in place, and create cleaned version with the steps included (ideal situation for Notebook). 
 
-# In[1]:
+# In[6]:
 
 get_ipython().magic(u'matplotlib inline')
 import matplotlib.pyplot as plt
@@ -23,13 +23,13 @@ import numpy as np
 import pandas as pd
 
 
-# In[2]:
+# In[9]:
 
 import pandas as pd
 dframe = pd.DataFrame.from_csv("../data/coal_prod_cleaned.csv")
 
 
-# In[3]:
+# In[10]:
 
 plt.scatter(dframe.Average_Employees, dframe.Labor_Hours)
 plt.xlabel("Number of Employees")
@@ -45,12 +45,12 @@ plt.ylabel("Total Amount Produced")
 plt.tight_layout()
 
 
-# In[5]:
+# In[11]:
 
 colors = sns.color_palette(n_colors=len(dframe.Year.unique())) 
 
 
-# In[6]:
+# In[12]:
 
 color_dict = {key: value for key, value in zip(sorted(dframe.Year.unique()), colors)}
 
