@@ -7,5 +7,7 @@ I gave a [talk](http://www.oscon.com/open-source-2015/public/schedule/detail/423
 
 More details including video of the talk can be found on my accompanying [blog post](http://jonathanwhitmore.com/2015/07/jupyter-notebook-best-practices-for-data-science) on my personal website. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JI1HWUAyJHE" frameborder="0" allowfullscreen></iframe>
+
 Issue and pull requests welcome!
 
